@@ -1,0 +1,98 @@
+@import './variables';
+
+#header {
+	box-shadow: 0px 1px 7px -4px rgba(0, 0, 0, 1);
+	position: fixed;
+	width: 100%;
+	top: 0;
+
+	.content {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		.nav {
+			display: flex;
+			align-items: center;
+
+			.link {
+				margin-right: 1.5rem;
+				color: $dark;
+				font-weight: 600;
+			}
+
+			.phone {
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+
+				a {
+					color: orange;
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1400px) {
+	#header {
+		.content {
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	#header {
+		.content {
+			.logo {
+				width: 150px;
+			}
+
+			.nav {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				height: 100%;
+				position: fixed;
+				right: 0;
+				top: 3rem;
+				background: $white-gray;
+				padding: 2rem;
+				transition: .3ms ease;
+				transform: translateX(200px);
+
+				li {
+					margin-bottom: 1rem;
+				}
+			}
+
+			.nav.active {
+				transform: translateY(0);
+			}
+
+			.menu {
+				position: absolute;
+				background: url("./../images/burgermenu.png") no-repeat;
+				background-size: 30px;
+				background-position: center;
+				width: 40px;
+				height: 40px;
+				right: 10px;
+				margin: 0 5px;
+				cursor: pointer;
+				transition: 0.4s ease;
+			}
+			.menu.active {
+				z-index: 999;
+				background: url("./../images/close.png") no-repeat;
+				background-size: 15px;
+				background-position: center;
+				transition: 0.3s ease;
+				filter: invert(1);
+			}
+
+		}
+	}
+}
+
