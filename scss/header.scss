@@ -5,6 +5,7 @@
 	position: fixed;
 	width: 100%;
 	top: 0;
+	z-index: 999;
 
 	.content {
 		display: flex;
@@ -61,14 +62,14 @@
 				padding: 2rem;
 				transition: .3ms ease;
 				transform: translateX(200px);
-
+        z-index: 999;
 				li {
 					margin-bottom: 1rem;
 				}
 			}
 
 			.nav.active {
-				transform: translateY(0);
+				transform: translateX(0);
 			}
 
 			.menu {

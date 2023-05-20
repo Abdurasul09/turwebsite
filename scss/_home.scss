@@ -1,0 +1,183 @@
+@import './variables';
+@import './mixins';
+
+#home {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+
+	.content {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		.info {
+			width: 40%;
+			margin-left: 4rem;
+			padding: 4rem 4rem 4rem 0;
+
+			.kalendar {
+				background: $orange;
+				border-radius: 4px;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				padding: 2px;
+
+				span {
+					color: $white;
+					font-size: .7rem;
+					font-weight: bolder;
+				}
+
+				input {
+					border: none;
+					outline: none;
+					padding: 5px;
+				}
+			}
+
+			h1 {
+				margin: 1rem 0;
+				font-size: 2rem;
+			}
+
+			p {
+				margin-bottom: 1rem;
+			}
+
+			.phone-block {
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+
+				label {
+					font-size: .6rem;
+					padding-bottom: 5px;
+					width: 200px;
+				}
+
+				.phone {
+					display: flex;
+					align-items: center;
+
+					input {
+						background: $white-gray;
+						border: none;
+						border-radius: 4px;
+						padding: .5rem;
+						margin-right: 5px;
+						outline: none;
+						width: 250px;
+					}
+
+					.btn {
+						@include globalBtn
+					}
+				}
+			}
+		}
+
+		.image {
+			width: 50%;
+			position: relative;
+
+			img {
+				width: 100%;
+			}
+
+			.circle {
+				width: 150px;
+				height: 150px;
+				background: $light-orange;
+				border-radius: 50%;
+				position: absolute;
+				left: 3rem;
+				top: 3rem;
+				z-index: -1;
+			}
+
+			.image-info {
+				position: absolute;
+				top: 7rem;
+				left: 16rem;
+
+				.text {
+					width: 150px;
+					background: $white;
+					border-radius: 4px;
+					padding: 5px;
+
+					p {
+						font-size: .4rem;
+					}
+				}
+
+				.line {
+					width: 66px;
+					height: 2px;
+					background: $white-gray;
+					transform: rotate(50deg);
+					position: absolute;
+					left: 2rem;
+					top: 4.4rem;
+				}
+
+				span {
+					background: $orange;
+					border-radius: 50%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 20px;
+					height: 20px;
+					color: white;
+					font-size: .9rem;
+					transform: rotate(180deg);
+					margin: 3rem 0 0 5rem;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	#home {
+		align-items: flex-start;
+		height: 70vh;
+
+		.content {
+			flex-direction: column-reverse;
+			margin-top: 6rem;
+
+			.info {
+				margin: 0;
+				width: 100%;
+				padding: 1rem;
+				margin-top: 2rem;
+			}
+
+			.image {
+				width: 100%;
+				height: 100%;
+				z-index: -1;
+				
+				.image-info {
+					top: 4rem;
+					left: 10rem;
+
+					.line {
+						left: 3rem;
+						top: 4rem;
+					}
+
+					span {
+						margin: 2rem 0 0 5.5rem;
+					}
+				}
+			}
+		}
+	}
+}
