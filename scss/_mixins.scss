@@ -1,0 +1,10 @@
+@import './variables';
+
+@mixin globalBtn(){
+  background: $orange;
+	padding: .5rem 1rem;
+	border-radius: 4px;
+	color: $white;
+	display: inline;
+	border: none;
+}
