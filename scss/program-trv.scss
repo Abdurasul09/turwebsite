@@ -1,0 +1,108 @@
+@import './mixins';
+@import './variables';
+
+#programtrv {
+	margin-top: 4rem;
+
+	h1{
+		margin-bottom: 2rem;
+		font-size: 2rem;
+ 	}
+
+	.content {
+		display: grid;
+		grid-template-columns: repeat(2, 45%);
+		gap: 2rem;
+		align-items: start;
+
+		.left {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+
+			img {
+				width: 100%;
+				object-fit: cover;
+			}
+
+			.btn {
+				width: 100%;
+				border: 1px solid $dark;
+				color: $dark;
+				padding: .5rem 1rem;
+				;
+				background: none;
+				margin-top: 1rem;
+				border-radius: 4px;
+
+			}
+		}
+
+		.right {
+			display: flex;
+			flex-direction: column;
+			align-items: start;
+			justify-content: space-between;
+			height: 100%;
+			width: 100%;
+
+			.carusel-btn {
+				display: flex;
+				align-items: center;
+
+				.arrow-left {
+					background-color: rgb(215, 215, 215);
+					padding: 5px;
+					border-radius: 2px;
+				}
+
+				span {
+					font-weight: bolder;
+					margin: 0 0.8rem;
+					font-size: 1rem;
+				}
+
+				.arrow-right {
+					background-color: rgb(215, 215, 215);
+					padding: 5px;
+					border-radius: 2px;
+				}
+			}
+
+			.text {
+				h3 {
+					margin-bottom: 0.5rem;
+					font-size: 1.2rem;
+				}
+
+				p {
+					line-height: 1.6;
+				}
+			}
+
+			.btn {
+				@include globalBtn;
+				width: 100%;
+			}
+		}
+	}
+}
+
+@media (max-width: 576px){
+	#programtrv{
+		h1{
+			margin-left: 0;
+			font-size: 1.5rem;
+		}
+		 .content{
+			grid-template-columns: repeat(1, 1fr);
+
+			.right{
+				.carusel-btn{
+					margin-bottom: 1rem;
+				}
+			}
+		 }
+	}
+}
