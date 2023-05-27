@@ -261,7 +261,7 @@ body {
 }
 .our-travel {
   position: relative;
-  margin-top: 4rem;
+  margin-top: 6rem;
 }
 .our-travel h1 {
   font-size: 2rem;
@@ -385,6 +385,9 @@ body {
     grid-template-columns: repeat(1, 1fr);
   }
   #programtrv .content .right .carusel-btn {
+    margin-bottom: 1rem;
+  }
+  #programtrv .content .right .text {
     margin-bottom: 1rem;
   }
 }
