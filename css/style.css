@@ -305,7 +305,7 @@ body {
 
 @media (max-width: 576px) {
   .our-travel {
-    margin-top: 3rem;
+    margin-top: 7rem;
   }
   .our-travel h1 {
     font-size: 1.5rem;
@@ -402,7 +402,7 @@ body {
     margin-bottom: 1rem;
   }
   #programtrv .content .right .text {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.2rem;
   }
 }
 
