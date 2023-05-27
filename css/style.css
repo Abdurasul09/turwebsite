@@ -270,7 +270,7 @@ body {
 }
 .our-travel {
   position: relative;
-  margin-top: 4rem;
+  margin-top: 5rem;
 }
 .our-travel h1 {
   font-size: 2rem;
@@ -400,7 +400,7 @@ body {
     margin-bottom: 1rem;
   }
   #programtrv .content .right .text {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
 }
 
