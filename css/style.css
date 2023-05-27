@@ -270,7 +270,6 @@ body {
 }
 .our-travel {
   position: relative;
-  margin-top: 5rem;
 }
 .our-travel h1 {
   font-size: 2rem;
@@ -305,6 +304,9 @@ body {
 }
 
 @media (max-width: 576px) {
+  .our-travel {
+    margin-top: 3rem;
+  }
   .our-travel h1 {
     font-size: 1.5rem;
   }
